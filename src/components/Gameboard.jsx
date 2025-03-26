@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
+import YouWon from './YouWon';
 
-const Gameboard = ({ setScore, bestScore, setBestScore }) => {
+const Gameboard = ({ setScore, bestScore, setBestScore, isModalOpen, setIsModalOpen }) => {
     const [cards, setCards] = useState([]);
     const [clickedCards, setClickedCards] = useState([]);
 
@@ -26,19 +27,34 @@ const Gameboard = ({ setScore, bestScore, setBestScore }) => {
                 localStorage.setItem('bestScore', clickedCards.length);
             }
             setClickedCards([]);
-        } else {
-            setClickedCards([...clickedCards, card.id]);
-            setScore(clickedCards.length + 1);
+            return;
         }
+
+        setClickedCards([...clickedCards, card.id]);
+
+        setScore((prevScore) => {
+            const newScore = prevScore + 1;
+            if (newScore === 12) {
+                setIsModalOpen(true);
+            }
+            return newScore;
+        });
 
         setCards(shuffleArray(cards));
     };
+
+    const restartGame = () => {
+        setBestScore(0);
+        setScore(0);
+        setIsModalOpen(false);
+    }
 
     return (
         <div className='gameboard'>
             {cards.map((card) => {
                 return <Card key={card.id} onClick={() => handleCardClick(card)} imageSrc={card.images.fixed_height.url} />
             })}
+            {isModalOpen && <YouWon restartGame={restartGame} />}
         </div>
     );
 };
