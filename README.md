@@ -1,12 +1,15 @@
-# React + Vite
+# Spongebob Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SpongeBob Memory Rush is a crazy game of attentiveness and speed, where the cards are constantly shuffled! 🧽💨
 
-Currently, two official plugins are available:
+🎮 How to play?
+A grid of cards with SpongeBob appears on the screen.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Click on a card - everything gets mixed up!
 
-## Expanding the ESLint configuration
+Your task is to open all the cards without repeating!
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🏆 The goal of the game
+Click all the cards on the field until the last one, despite the chaos that is happening on the screen!
+
+Can you win this crazy challenge? Test your memory and attentiveness in Bikini Bottom! 🌊🔥
