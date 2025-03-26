@@ -1,0 +1,49 @@
+.header {
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+}
+
+.score {
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    .header {
+        margin-top: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .rules {
+        font-weight: 500;
+        width: 330px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        margin-top: 1rem;
+    }
+
+    .game-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rules {
+        width: 330px;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,47 @@
+.gameboard {
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 10px;
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .gameboard {
+        width: 400px;
+    }
+
+    .image {
+        border: 3px solid black;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gameboard {
+        width: 700px;
+        margin-bottom: 2rem;
+    }
+
+    .image {
+        border: 3px solid black;
+        width: 150px;
+        height: 150px;
+    }
+}
