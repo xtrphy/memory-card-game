@@ -36,6 +36,7 @@ const Gameboard = ({ setScore, bestScore, setBestScore, isModalOpen, setIsModalO
             const newScore = prevScore + 1;
             if (newScore === 12) {
                 setIsModalOpen(true);
+                setBestScore(0);
             }
             return newScore;
         });
